@@ -1,0 +1,26 @@
+// Place all the styles related to the Hello controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$superColor: #5fff3a;
+
+@mixin superBorder {
+  border: solid $superColor 1px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+ul.top-menu {
+  @include superBorder;
+  a {
+    color: $superColor;
+    &:hover {
+      color: green;
+    }
+  }
+}
+
+div.greeting {
+  @include superBorder;
+}

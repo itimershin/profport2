@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Список компетенций</h1>
+
+<table class="table table-hover">
+  <thead>
+    <tr class="panel panel-heading">
+      <th>Название</th>
+      <th>Автор</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @competences.each do |competence| %>
+      <tr>
+        <td><%= competence.name %></td>
+        <td><%= competence.author %></td>
+        <td><%= link_to '  Показать ', competence, class: 'glyphicon glyphicon-triangle-right'  %></td>
+        <td><%= link_to '  Редактировать ', edit_competence_path(competence), class: 'glyphicon glyphicon-pencil' %></td>
+        <td><%= link_to '  Удалить ', competence, method: :delete, data: { confirm: 'вы уверены?' }, class: 'glyphicon glyphicon-remove'  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

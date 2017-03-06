@@ -1,0 +1,14 @@
+<ul class="top-menu">
+  <li><a href="#">Адрес</a></li>
+</ul>
+
+<div class="greeting">
+  <h1><%= show_user_greeting @name %></h1>
+</div>
+
+<h3>Список городов:</h3>
+<%= select_tag(:cities, options_for_select(@towns)) %>
+
+
+<% benchmark 'Обработка...' do %>
+<% end %>

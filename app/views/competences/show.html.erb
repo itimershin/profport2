@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Имя:</strong>
+  <%= @competence.name %>
+</p>
+
+<p>
+  <strong>Автор:</strong>
+  <%= @competence.author %>
+</p>
+
+<%= link_to 'Редактировать', edit_competence_path(@competence) %> |
+<%= link_to 'Назад', competences_path %>

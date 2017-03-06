@@ -1,0 +1,11 @@
+%nav.navbar
+  %ul.nav.navbar-nav
+    - if user_signed_in?
+      %li= link_to 'Quit', sign_out_path, method: :delete
+    - else
+      %li= link_to 'Войти', sign_in_path
+      %li= link_to 'Компетенции', competences_path
+      %li= link_to 'Создать', new_competence_path
+  %form.navbar-form.navbar-left{:role => "search"}
+    .form-group
+      %input.form-control{:placeholder => "Найти", :type => "text"}
