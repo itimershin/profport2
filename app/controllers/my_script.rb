@@ -5,6 +5,7 @@ end
 p generate_password(7)
 
 
+=begin
 person = { age: 15, name: 'Misha'}
 person.each { |k, v| p "#{k}" => "#{v}"}
 info = { age: 20, wage: 25000 }
@@ -14,4 +15,4 @@ hash = Hash.new(0)
 p hash[:id]
 
 arr = ["sfsdfsdf", "wqewer", "wqeqwe" ,"qweasad", "qweasad", "qweasad"]
-fre
+fre=end
